@@ -31,9 +31,12 @@ public class User_Interface1 extends java.awt.Frame {
         Home1 = new java.awt.Menu();
         Testing1 = new java.awt.Menu();
         Learn = new java.awt.Menu();
+        Help = new java.awt.Menu();
 
         jToolBar1.setRollover(true);
 
+        setBackground(java.awt.Color.darkGray);
+        setMaximizedBounds(new java.awt.Rectangle(1, 1, 2, 2));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 exitForm(evt);
@@ -41,7 +44,7 @@ public class User_Interface1 extends java.awt.Frame {
         });
 
         jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
-        add(jDesktopPane1, java.awt.BorderLayout.CENTER);
+        jDesktopPane1.setLayout(new javax.swing.BoxLayout(jDesktopPane1, javax.swing.BoxLayout.LINE_AXIS));
 
         Home1.setLabel("Home ");
         Home1.setName("");
@@ -51,6 +54,7 @@ public class User_Interface1 extends java.awt.Frame {
             }
         });
         menuBar1.add(Home1);
+        Home1.getAccessibleContext().setAccessibleParent(jDesktopPane1);
 
         Testing1.setLabel("Testing");
         Testing1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,12 +63,30 @@ public class User_Interface1 extends java.awt.Frame {
             }
         });
         menuBar1.add(Testing1);
-        Testing1.getAccessibleContext().setAccessibleName("Testing");
 
         Learn.setLabel("Learning");
         menuBar1.add(Learn);
 
+        Help.setLabel("Help");
+        Help.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HelpActionPerformed(evt);
+            }
+        });
+        menuBar1.add(Help);
+
         setMenuBar(menuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -86,6 +108,10 @@ public class User_Interface1 extends java.awt.Frame {
        
     }//GEN-LAST:event_Home1ActionPerformed
 
+    private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HelpActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -99,6 +125,7 @@ public class User_Interface1 extends java.awt.Frame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Menu Help;
     private java.awt.Menu Home1;
     private java.awt.Menu Learn;
     private java.awt.Menu Testing1;
