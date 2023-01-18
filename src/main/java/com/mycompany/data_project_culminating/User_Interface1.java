@@ -44,6 +44,7 @@ public class User_Interface1 extends java.awt.Frame {
         });
 
         jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
+        jDesktopPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
         jDesktopPane1.setLayout(new javax.swing.BoxLayout(jDesktopPane1, javax.swing.BoxLayout.LINE_AXIS));
 
         Home1.setLabel("Home ");
