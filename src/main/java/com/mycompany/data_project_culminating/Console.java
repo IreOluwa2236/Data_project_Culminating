@@ -18,7 +18,8 @@ public class Console {
         // creating a Jframe object.
         new User_Interface1().setVisible(true); 
         System.out.println("javadoc created");
-        System.out.println("t   est");
+        System.out.println("t   est"); 
+        System.out.println("please save");
         
                 
     }
