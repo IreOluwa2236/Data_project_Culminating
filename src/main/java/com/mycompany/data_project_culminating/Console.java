@@ -20,7 +20,7 @@ public class Console {
         System.out.println("javadoc created");
         System.out.println("t   est"); 
         System.out.println("please save");
-        
+        new NewJFrame().setVisible(true);
                 
     }
     

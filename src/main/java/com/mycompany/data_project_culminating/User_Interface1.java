@@ -26,7 +26,8 @@ public class User_Interface1 extends java.awt.Frame {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         menuBar1 = new java.awt.MenuBar();
         Home1 = new java.awt.Menu();
         Testing1 = new java.awt.Menu();
@@ -43,9 +44,29 @@ public class User_Interface1 extends java.awt.Frame {
             }
         });
 
-        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
-        jDesktopPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
-        jDesktopPane1.setLayout(new javax.swing.BoxLayout(jDesktopPane1, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 652, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 298, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         Home1.setLabel("Home ");
         Home1.setName("");
@@ -55,7 +76,6 @@ public class User_Interface1 extends java.awt.Frame {
             }
         });
         menuBar1.add(Home1);
-        Home1.getAccessibleContext().setAccessibleParent(jDesktopPane1);
 
         Testing1.setLabel("Testing");
         Testing1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,11 +102,11 @@ public class User_Interface1 extends java.awt.Frame {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -101,7 +121,8 @@ public class User_Interface1 extends java.awt.Frame {
     }//GEN-LAST:event_exitForm
 
     private void Testing1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Testing1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:  
+        
     }//GEN-LAST:event_Testing1ActionPerformed
 
     private void Home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home1ActionPerformed
@@ -130,7 +151,8 @@ public class User_Interface1 extends java.awt.Frame {
     private java.awt.Menu Home1;
     private java.awt.Menu Learn;
     private java.awt.Menu Testing1;
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JToolBar jToolBar1;
     private java.awt.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
