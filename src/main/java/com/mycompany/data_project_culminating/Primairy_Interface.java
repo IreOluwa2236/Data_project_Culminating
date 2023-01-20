@@ -5,6 +5,8 @@
 package com.mycompany.data_project_culminating;
 
 import java.util.HashSet;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -28,9 +30,9 @@ public class Primairy_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         Exit = new javax.swing.JMenu();
         Learn = new javax.swing.JMenu();
@@ -38,35 +40,8 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("hi");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel1)
-                .addContainerGap(727, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1)
-                .addContainerGap(510, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 781, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 558, Short.MAX_VALUE)
-        );
+        jTabbedPane1.addTab("tab1", jTabbedPane2);
+        jTabbedPane1.addTab("tab2", jTabbedPane3);
 
         Exit.setText("Exit");
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -91,12 +66,15 @@ public class Primairy_Interface extends javax.swing.JFrame {
             public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
             }
         });
+        Learn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LearnActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(Learn);
-        Learn.getAccessibleContext().setAccessibleParent(jPanel1);
 
         Test.setText("Test");
         jMenuBar1.add(Test);
-        Test.getAccessibleContext().setAccessibleParent(jPanel2);
 
         setJMenuBar(jMenuBar1);
 
@@ -104,19 +82,15 @@ public class Primairy_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 781, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 115, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 558, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 157, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,7 +98,7 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
     private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         // TODO add your handling code here:
-        jPanel1.validate(); 
+
         
         
         
@@ -137,8 +111,18 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         // TODO add your handling code here: 
-        System.exit(WIDTH);
+        
     }//GEN-LAST:event_ExitActionPerformed
+
+    private void LearnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LearnActionPerformed
+        // TODO add your handling code here:  
+        JFrame frame = new JFrame();
+        JPanel panel1 = new JPanel();
+        JPanel panel2 = new JPanel();
+        
+       frame.setContentPane(panel2);
+       frame.validate(); 
+    }//GEN-LAST:event_LearnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,18 +155,31 @@ public class Primairy_Interface extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Primairy_Interface().setVisible(true); 
+                
                
-            }
+                
+    
+                
+                  
+                      
+                   
+            } 
+            
+            
         });
-    }
+    }  
+    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Exit;
     private javax.swing.JMenu Learn;
     private javax.swing.JMenu Test;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables
 }
