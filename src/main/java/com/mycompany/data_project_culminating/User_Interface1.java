@@ -27,9 +27,7 @@ public class User_Interface1 extends java.awt.Frame {
 
         jToolBar1 = new javax.swing.JToolBar();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         menuBar1 = new java.awt.MenuBar();
-        Home1 = new java.awt.Menu();
         Testing1 = new java.awt.Menu();
         Learn = new java.awt.Menu();
         Help = new java.awt.Menu();
@@ -38,44 +36,27 @@ public class User_Interface1 extends java.awt.Frame {
 
         setBackground(java.awt.Color.darkGray);
         setMaximizedBounds(new java.awt.Rectangle(1, 1, 2, 2));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 exitForm(evt);
             }
         });
 
-        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 652, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 658, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 304, Short.MAX_VALUE)
         );
-
-        Home1.setLabel("Home ");
-        Home1.setName("");
-        Home1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Home1ActionPerformed(evt);
-            }
-        });
-        menuBar1.add(Home1);
 
         Testing1.setLabel("Testing");
         Testing1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,14 +106,13 @@ public class User_Interface1 extends java.awt.Frame {
         
     }//GEN-LAST:event_Testing1ActionPerformed
 
-    private void Home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home1ActionPerformed
-        // TODO add your handling code here: 
-       
-    }//GEN-LAST:event_Home1ActionPerformed
-
     private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HelpActionPerformed
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseClicked
 
     /**
      * @param args the command line arguments
@@ -148,11 +128,9 @@ public class User_Interface1 extends java.awt.Frame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Menu Help;
-    private java.awt.Menu Home1;
     private java.awt.Menu Learn;
     private java.awt.Menu Testing1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JToolBar jToolBar1;
     private java.awt.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
