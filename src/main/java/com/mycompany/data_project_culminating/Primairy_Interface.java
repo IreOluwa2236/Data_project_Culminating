@@ -31,17 +31,67 @@ public class Primairy_Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Exit = new javax.swing.JMenu();
-        Learn = new javax.swing.JMenu();
-        Test = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 0, 102));
 
-        jTabbedPane1.addTab("tab1", jTabbedPane2);
-        jTabbedPane1.addTab("tab2", jTabbedPane3);
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTabbedPane1.setFont(new java.awt.Font("Imprint MT Shadow", 2, 14)); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 521, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Introduction", jPanel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 521, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Learning", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 521, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Testing", jPanel3);
+
+        jMenuBar1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jMenuBar1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         Exit.setText("Exit");
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -56,25 +106,8 @@ public class Primairy_Interface extends javax.swing.JFrame {
         });
         jMenuBar1.add(Exit);
 
-        Learn.setText("Learn");
-        Learn.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
-            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
-                LearnMenuKeyPressed(evt);
-            }
-            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
-            }
-            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
-            }
-        });
-        Learn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LearnActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(Learn);
-
-        Test.setText("Test");
-        jMenuBar1.add(Test);
+        jMenu1.setLabel("Settings");
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -82,15 +115,11 @@ public class Primairy_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 115, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 157, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
         );
 
         pack();
@@ -104,25 +133,14 @@ public class Primairy_Interface extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ExitMouseClicked
 
-    private void LearnMenuKeyPressed(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_LearnMenuKeyPressed
-        // TODO add your handling code here: 
-        jPanel2.validate();
-    }//GEN-LAST:event_LearnMenuKeyPressed
-
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         // TODO add your handling code here: 
         
     }//GEN-LAST:event_ExitActionPerformed
 
-    private void LearnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LearnActionPerformed
-        // TODO add your handling code here:  
-        JFrame frame = new JFrame();
-        JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
-        
-       frame.setContentPane(panel2);
-       frame.validate(); 
-    }//GEN-LAST:event_LearnActionPerformed
+    private void jMenuBar1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jMenuBar1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuBar1AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -175,11 +193,11 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Exit;
-    private javax.swing.JMenu Learn;
-    private javax.swing.JMenu Test;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables
 }
