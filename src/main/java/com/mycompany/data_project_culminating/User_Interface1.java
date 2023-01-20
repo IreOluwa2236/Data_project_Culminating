@@ -27,6 +27,7 @@ public class User_Interface1 extends java.awt.Frame {
 
         jToolBar1 = new javax.swing.JToolBar();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         menuBar1 = new java.awt.MenuBar();
         Testing1 = new java.awt.Menu();
         Learn = new java.awt.Menu();
@@ -47,15 +48,27 @@ public class User_Interface1 extends java.awt.Frame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        jLabel1.setFont(new java.awt.Font("Imprint MT Shadow", 2, 36)); // NOI18N
+        jLabel1.setText("Welcome");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 658, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(493, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 304, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         Testing1.setLabel("Testing");
@@ -130,6 +143,7 @@ public class User_Interface1 extends java.awt.Frame {
     private java.awt.Menu Help;
     private java.awt.Menu Learn;
     private java.awt.Menu Testing1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar jToolBar1;
     private java.awt.MenuBar menuBar1;
