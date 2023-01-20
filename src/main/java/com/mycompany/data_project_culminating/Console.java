@@ -4,6 +4,9 @@
  */
 package com.mycompany.data_project_culminating;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /**
  *
  * @author irolu9768
@@ -16,11 +19,9 @@ public class Console {
     public static void main(String[] args) {
         // TODO code application logic here 
         // creating a Jframe object.
-        new User_Interface1().setVisible(true); 
-        System.out.println("javadoc created");
-        System.out.println("t   est"); 
-        System.out.println("please save");
-        new NewJFrame().setVisible(true);
+       
+        new Primairy_Interface().setVisible(true); 
+       Primairy_Interface newInterface = new Primairy_Interface();
                 
     }
     
