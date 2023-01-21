@@ -4,8 +4,10 @@
  */
 package com.mycompany.data_project_culminating;
 
+import java.awt.ScrollPane;
 import java.util.HashSet;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -13,6 +15,9 @@ import javax.swing.JPanel;
  * @author irolu
  */
 public class Primairy_Interface extends javax.swing.JFrame {
+
+    private JLabel jLabel1;
+    private ScrollPane scrollPane1;
 
     /**
      * Creates new form Primairy_Interface
@@ -32,10 +37,6 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        scrollPane1 = new java.awt.ScrollPane();
-        label2 = new java.awt.Label();
-        label1 = new java.awt.Label();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -50,32 +51,15 @@ public class Primairy_Interface extends javax.swing.JFrame {
 
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Imprint MT Shadow", 2, 36)); // NOI18N
-        jLabel1.setText("Introduction");
-
-        label2.setText("label2");
-        scrollPane1.add(label2);
-
-        label1.setText("label1");
-        scrollPane1.add(label1);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(594, Short.MAX_VALUE))
-            .addComponent(scrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 798, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE))
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Introduction", jPanel1);
@@ -88,7 +72,7 @@ public class Primairy_Interface extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Learning", jPanel2);
@@ -101,7 +85,7 @@ public class Primairy_Interface extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 592, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Testing", jPanel3);
