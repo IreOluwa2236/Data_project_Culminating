@@ -20,9 +20,9 @@ public class Console {
         // TODO code application logic here 
         // creating a Jframe object.
        
-        new Primary_Interface().setVisible(true); 
+       
        Primary_Interface newInterface = new Primary_Interface();
-                
+       newInterface.setVisible(true); 
     }
     
 }
