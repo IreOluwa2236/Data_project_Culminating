@@ -20,7 +20,7 @@ public class Primary_Interface extends javax.swing.JFrame {
     private ScrollPane scrollPane1;
 
     /**
-     * Creates new form Primairy_Interface
+     * Creates new form Primary_Interface
      */
     public Primary_Interface() {
         initComponents();
@@ -40,6 +40,8 @@ public class Primary_Interface extends javax.swing.JFrame {
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Exit = new javax.swing.JMenu();
@@ -53,20 +55,24 @@ public class Primary_Interface extends javax.swing.JFrame {
 
         jTabbedPane2.setName(""); // NOI18N
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 798, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
-        jTabbedPane3.addTab("tab1", jPanel4);
+        jTabbedPane3.addTab("Define", jPanel4);
 
-        jTabbedPane2.addTab("tab2", jTabbedPane3);
+        jTabbedPane2.addTab("Unit One", jTabbedPane3);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -78,6 +84,8 @@ public class Primary_Interface extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane2)
         );
+
+        jTabbedPane2.getAccessibleContext().setAccessibleName("Unit one");
 
         jTabbedPane1.addTab("Learning", jPanel2);
 
@@ -189,7 +197,8 @@ public class Primary_Interface extends javax.swing.JFrame {
                 new Primary_Interface().setVisible(true); 
                 String[] Define1 ={"Simple Microscope", "Light microscope", "Dissecting microscope", "Phase contrast microscope", "Electron Microscope", "Working distance", "Magnification", " Resolution", "Scanning", "Diffusion", "Osmosis", "Cytoplasm", "ECF(Extra Cellular fluid)", "Homeostasis", "Cell", "Tissue", " organ", "Organ System"};
                 String[] Definitions1 ={"Single lens and limited magnification", "More than 1 lens, Bright light is condensed and focused to pass through a thin selectiion of material", "2 oculars that create a 3d image", "Alters the brightness of come  cell areas to make some brighter than others", " Use electrons to increase resolve power", "A form of electron microscope where electrons pass through dead and dehydrated specimen on a flourescent screen with a cross section view", "A form of electron microscope where specimen are coated with a thin metal layer resulting in electrons bouncing off the specimen and a 3D image being reflected on to the screen", "Distance from objective lens to cover slip", "Enlarge an object","Seperating or discerning details", "Searching a slide for a a specimen", "Movement of mollecules from an area of high concentration to an area of low concentration across a semi permeable memebrain", " Movment of water from an area of high concentration to an area of low conentration to reach equillibrium", " The fluid inside the cell where most chemical reactions take place", "The liquid environment surrounding living cells composed of water, ions and enzymes", "Maintaining constant conditions within the body with little to no change"};
-               // String[] Definitionquestions1 ={};
+                jTextArea1.
+                // String[] Definitionquestions1 ={};
     
                 
                   
@@ -212,8 +221,10 @@ public class Primary_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
