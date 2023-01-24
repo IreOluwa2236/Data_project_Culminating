@@ -17,13 +17,15 @@ import javax.swing.JPanel;
 public class Primary_Interface extends javax.swing.JFrame {
 
     private JLabel jLabel1;
-    private ScrollPane scrollPane1;
-
+    //private ScrollPane scrollPane1;
+    
     /**
      * Creates new form Primary_Interface
      */
     public Primary_Interface() {
-        initComponents();
+        initComponents(); 
+         JFrame frame = new JFrame();
+        frame.setVisible(true);
     }
 
     /**
@@ -143,6 +145,9 @@ public class Primary_Interface extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
+        getAccessibleContext().setAccessibleDescription("");
+        getAccessibleContext().setAccessibleParent(this);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -156,7 +161,7 @@ public class Primary_Interface extends javax.swing.JFrame {
 
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         // TODO add your handling code here: 
-        
+        System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
 
     private void jMenuBar1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jMenuBar1AncestorAdded
@@ -199,15 +204,18 @@ public class Primary_Interface extends javax.swing.JFrame {
                 String[] Definitions1 ={"Single lens and limited magnification", "More than 1 lens, Bright light is condensed and focused to pass through a thin selectiion of material", "2 oculars that create a 3d image", "Alters the brightness of come  cell areas to make some brighter than others", " Use electrons to increase resolve power", "A form of electron microscope where electrons pass through dead and dehydrated specimen on a flourescent screen with a cross section view", "A form of electron microscope where specimen are coated with a thin metal layer resulting in electrons bouncing off the specimen and a 3D image being reflected on to the screen", "Distance from objective lens to cover slip", "Enlarge an object","Seperating or discerning details", "Searching a slide for a a specimen", "Movement of mollecules from an area of high concentration to an area of low concentration across a semi permeable memebrain", " Movment of water from an area of high concentration to an area of low conentration to reach equillibrium", " The fluid inside the cell where most chemical reactions take place", "The liquid environment surrounding living cells composed of water, ions and enzymes", "Maintaining constant conditions within the body with little to no change"};
                 
                 // String[] Definitionquestions1 ={};
-    
+                  
                 
                   
                       
                    
             } 
+          
             
             
-        });
+        }); 
+        
+        
     }  
     
     
