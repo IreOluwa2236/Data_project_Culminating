@@ -4,7 +4,7 @@
  */
 package com.mycompany.data_project_culminating;
 
-import java.awt.ScrollPane;
+//import java.awt.ScrollPane;
 import java.util.HashSet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -51,6 +51,9 @@ public class Primary_Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 102));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(new java.awt.Color(0, 0, 153));
+        setSize(new java.awt.Dimension(5, 5));
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jTabbedPane1.setFont(new java.awt.Font("Imprint MT Shadow", 2, 14)); // NOI18N
@@ -145,8 +148,7 @@ public class Primary_Interface extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        getAccessibleContext().setAccessibleDescription("");
-        getAccessibleContext().setAccessibleParent(this);
+        getAccessibleContext().setAccessibleName("Biology study page");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,13 +200,16 @@ public class Primary_Interface extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Primary_Interface().setVisible(true); 
                 String[] Define1 ={"Simple Microscope", "Light microscope", "Dissecting microscope", "Phase contrast microscope", "Electron Microscope", "Working distance", "Magnification", " Resolution", "Scanning", "Diffusion", "Osmosis", "Cytoplasm", "ECF(Extra Cellular fluid)", "Homeostasis", "Cell", "Tissue", " organ", "Organ System"};
                 String[] Definitions1 ={"Single lens and limited magnification", "More than 1 lens, Bright light is condensed and focused to pass through a thin selectiion of material", "2 oculars that create a 3d image", "Alters the brightness of come  cell areas to make some brighter than others", " Use electrons to increase resolve power", "A form of electron microscope where electrons pass through dead and dehydrated specimen on a flourescent screen with a cross section view", "A form of electron microscope where specimen are coated with a thin metal layer resulting in electrons bouncing off the specimen and a 3D image being reflected on to the screen", "Distance from objective lens to cover slip", "Enlarge an object","Seperating or discerning details", "Searching a slide for a a specimen", "Movement of mollecules from an area of high concentration to an area of low concentration across a semi permeable memebrain", " Movment of water from an area of high concentration to an area of low conentration to reach equillibrium", " The fluid inside the cell where most chemical reactions take place", "The liquid environment surrounding living cells composed of water, ions and enzymes", "Maintaining constant conditions within the body with little to no change"};
                 
                 // String[] Definitionquestions1 ={};
-                  
+                   Primary_Interface frame;
+                    frame = new Primary_Interface();
+                    frame.setVisible(true);
                 
                   
                       

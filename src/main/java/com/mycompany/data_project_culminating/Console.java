@@ -23,7 +23,9 @@ public class Console {
         
         Primary_Interface frame;
         frame = new Primary_Interface();
-        frame.setVisible(true); 
+        frame.setVisible(true);  
+        
+        
         
         
       
