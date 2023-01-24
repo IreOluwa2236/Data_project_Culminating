@@ -21,9 +21,17 @@ public class Console {
         // creating a Jframe object.
        
         
-        Primary_Interface frame;
-        frame = new Primary_Interface();
-        frame.setVisible(true); 
+       /**  
+        
+        
+        
+        
+        */
+        
+        
+        
+        
+        
         
         
       
