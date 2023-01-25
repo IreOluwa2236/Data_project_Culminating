@@ -17,17 +17,8 @@ public class Console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here 
-        // creating a Jframe object.
-       
-        
-       /**  
-        
-        
-        
-        
-        */
-        
+        Text_Interface newext = new Text_Interface();
+        newext.OpenTextInt();
         
         
         
