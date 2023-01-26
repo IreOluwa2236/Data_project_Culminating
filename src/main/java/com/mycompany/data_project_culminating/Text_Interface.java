@@ -16,10 +16,10 @@ public class Text_Interface extends Console {
    System.out.println("Welcom to the Biology study database");
    System.out.println("Input 1 to learn, 2 to test yourself and -1 to exit the program");
    int response =Index.nextInt();  
-   
+  
    
   if(response > 0){ 
-      Index.close();
+      
   if(response == 1){ 
   for(int index = 0; index < Define1.length; index++){ 
       if(index != Define1.length){
@@ -30,25 +30,29 @@ public class Text_Interface extends Console {
       
   }
   }
-  if(response == 2){ 
-      Scanner Index2 = new Scanner(System.in);  
-      testScores =0; 
-      System.out.println("define the following");
-   for(int index = 0; index < Define1.length; index++){  
-       
-       String Print = Define1[index] + ": "; 
-       System.out.println(Print); 
-       String response2 = Index2.nextLine();   
-       
-       if(response2.equals(Definitions1[index]) ){
-       System.out.println("Correct"); 
-       testScores +=1;
-       } else{
-       System.out.println("Incorrect");
-       }
-       
-   }
+  if(response == 2){  
       
+     Scanner Index2 = new Scanner(System.in);  
+testScores =0; 
+for(int index =0; index < Define1.length; index++){
+    System.out.println("\n" + "Define" + Define1[index]);  
+    String Return ="";
+    while(Return.isEmpty()){
+        Return = Index2.nextLine(); 
+        if(Return.isEmpty()){
+            System.out.println("You did not enter any input, please enter your answer:");
+        }
+    }
+    if(Return.equals(Definitions1[index])){
+        System.out.println("\n" + "That was Correct"); 
+    }else{
+        System.out.println("\n" +"that was incorrect. The correct answer is " + Definitions1[index]); 
+    }
+}
+
+
+   
+       Index2.close(); 
   }
   
   
@@ -56,6 +60,7 @@ public class Text_Interface extends Console {
   }
   
   
-  
+  Index.close(); 
+ 
    }
 }
