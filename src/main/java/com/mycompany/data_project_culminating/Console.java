@@ -18,7 +18,8 @@ public class Console {
      */
     public static void main(String[] args) {
         Text_Interface newext = new Text_Interface();
-        newext.OpenTextInt(); 
+        newext.OpenTextInt();  
+        
         
         
         
